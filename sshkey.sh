@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cd || exit
-ssh-keygen -t rsa -b 4096 -C lizz@sentime.com
+ssh-keygen -t rsa -b 4096 -C AllentDan@yeah.net
 
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_rsa
