@@ -1,0 +1,42 @@
+imap jk <Esc>
+nmap <space> :
+nmap J 5j
+nmap K 5k
+nmap H 7h
+nmap L 7l
+
+let mapleader=" "
+syntax on
+set number
+set norelativenumber
+set cursorline
+set wrap
+set showcmd
+set wildmenu
+
+"tab space
+"set smartindent
+"set tabstop=4
+"set shiftwidth=4
+"set expandtab
+
+call plug#begin('~/.vim/plugged')
+Plug 'scrooloose/nerdtree'
+Plug 'valloric/youcompleteme', { 'commit':'d98f896' } "need run python install in ~/.vim/plugged/youcompleteme
+call plug#end()
+
+nnoremap <C-e> :NERDTreeToggle<CR>
+
+" ===
+" === You Complete ME
+" ===
+nnoremap gd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nnoremap g/ :YcmCompleter GetDoc<CR>
+nnoremap gt :YcmCompleter GetType<CR>
+nnoremap gr :YcmCompleter GoToReferences<CR>
+let g:ycm_autoclose_preview_window_after_completion=0
+let g:ycm_autoclose_preview_window_after_insertion=1
+let g:ycm_use_clangd = 0
+let g:ycm_python_interpreter_path = "/home/PJLAB/dongchunyu/anaconda3/bin/python"
+let g:ycm_python_binary_path = "/home/PJLAB/dongchunyu/anaconda3/bin/python"
+
